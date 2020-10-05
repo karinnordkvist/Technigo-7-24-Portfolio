@@ -43,7 +43,7 @@ a:hover {
 h5 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1.05px;
   text-transform: uppercase;
   color: #7f78fa;
@@ -57,6 +57,10 @@ h5 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.gray {
+  background: #f4f4f4;
 }
 
 .bold {
@@ -76,7 +80,8 @@ h5 {
 .header {
   width: 100%;
   height: 45vh;
-  background: url(./images/header-image.png);
+  background: url(./images/header-image-3.png);
+  background-size: cover;
   display: flex;
 }
 
@@ -150,10 +155,6 @@ h5 {
 }
 
 /* ----------------------------- HELLO -----------------------------  */
-.hello {
-  background: #f4f4f4;
-}
-
 .hello--img {
   width: 55px;
   margin-right: 15px;
@@ -178,10 +179,6 @@ h5 {
 }
 
 /* ----------------------------- FEATURED PR -----------------------------  */
-.featured-projects {
-  background: #f4f4f4;
-}
-
 .featured-projects--wrapper {
   max-width: 60vw;
   margin: 0 0 50px 0;
@@ -214,7 +211,7 @@ h5 {
 .featured--text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin-top: 20px;
 }
@@ -253,7 +250,7 @@ h5 {
 .more-thoughts--date {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
   color: #7f78fa;
@@ -262,20 +259,20 @@ h5 {
 
 .thoughts--header {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
 }
 
 .thoughts--text {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
 }
 
 .more-thoughts--wrapper {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   width: 60vw;
 }
@@ -286,10 +283,6 @@ h5 {
 }
 
 /* ----------------------------- SKILLS -----------------------------  */
-.skills {
-  background: #f4f4f4;
-}
-
 .skills--wrapper {
   display: flex;
   width: 60vw;
@@ -316,7 +309,6 @@ ul,
 li {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
 }
 
 /* ----------------------------- FOR MORE -----------------------------  */
@@ -364,13 +356,12 @@ li {
 
 /* ----------------------------- CONTACT -----------------------------  */
 .contact {
-  background: #cfcaec;
-  background: linear-gradient(0deg, #cfcaec 7%, #7f78fa 71%);
-  color: #fff;
+  background: #e8b3c2;
+  color: #303030;
 }
 
 .contact--header {
-  color: #fff;
+  color: #303030;
 }
 
 .contact--info {
