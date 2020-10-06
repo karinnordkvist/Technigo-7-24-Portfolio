@@ -422,6 +422,10 @@ li {
   font-size: 18px;
   font-weight: 400;
 }
+.contact--info .desktop,
+.contact--info a {
+  font-weight: 400;
+}
 
 @media (max-width: 800px) {
   .desktop {

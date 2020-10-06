@@ -432,6 +432,11 @@ li {
   padding: 5px;
   font-size: 18px;
   font-weight: 400;
+
+  .desktop,
+  a {
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 800px) {
