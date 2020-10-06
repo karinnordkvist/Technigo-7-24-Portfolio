@@ -1,3 +1,5 @@
+const projectArticle = document.querySelectorAll('.feat');
+
 const projects = [
   {
     name: 'SmoothDay',
@@ -33,3 +35,46 @@ const projects = [
 ];
 
 console.log(projects);
+
+class projectTemplate {
+  constructor(
+    projectnName,
+    projectDescription,
+    projectInformation,
+    projectImage,
+    projectTag
+  ) {
+    this.projectName = projectnName;
+    this.projectDescription = projectDescription;
+    this.projectInformation = projectInformation;
+    this.projectImage = projectImage;
+    this.projectTag = projectTag;
+  }
+}
+
+// const generateProjectInfo = (projects) => {
+//   const projectInfo = projects.map((item) => {
+//     return new projectTemplate(
+//       item.name,
+//       item.description,
+//       item.information,
+//       item.img,
+//       item.tag
+//     );
+//   });
+//   return projectInfo;
+// };
+
+// const getProjectHTML = (projects) => {
+//     projects.forEach((item, index) => {
+//         projectArticle[index].querySelector(".feat-img").src =
+//         item.img;
+//         projectArticle[index].querySelector(".restaurant-name").innerText =
+//         item.restaurantName;
+//         projectArticle[index].querySelector(".restaurant-address").innerText =
+//         item.restaurantAddress;
+//         projectArticle[index].querySelector(".restaurant-rating").innerText =
+//             ` ${item.restaurantRating} ${item.restaurantUserRating}`;
+//     });
+
+// console.log(generateProjectInfo(projects));

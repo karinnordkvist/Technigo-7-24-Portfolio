@@ -42,17 +42,13 @@
       alt="Portrait of Karin"
     />
 
-    <!-- <div class="stroke-circle--wrapper">
-        <div class="stroke-circle">
-            <div class="stroke"></div>
-            <div class="circle"></div>
-        </div>
-    </div> -->
 
+    <!-- <img class="hello--img" src="./images/pin-blue.png" alt="Decorative symbol before the text" /> -->
     <!------------------ HELLO ------------------>
     <section class="hello field gray">
       <p class="hello--text">
-        <img class="hello--img" src="./images/pin-blue.png" alt="Decorative symbol before the text" />Hello! I’m a strategic and creative senior art director/digital designer
+        <span class="stroke"></span><span class="circle"></span>
+        Hello! I’m a strategic and creative senior art director/digital designer
         with frontend developer skills and experience design. I’m all about
         solving problems that matter and creating awesome, meaningful products
         for people to love.
@@ -61,85 +57,96 @@
     
     <!------------------ TECH ------------------>
     <section class="tech field">
-      <h2 class="tech--header heading">Tech</h2>
+      <h2 class="heading">Tech</h2>
       <p class="tech--text">
-        HTML, CSS, <span class="bold-italic pink">Sass</span>, <span class="bold-italic pink">Flexbox</span>, <span class="bold-italic pink">JavaScript</span>, ES6, Web Accessibility, API:s, mob-programming,
+        HTML, CSS, <span class="bold-italic pink">Sass,</span> <span class="bold-italic pink">Flexbox,</span> JavaScript, <span class="bold-italic pink">ES6,</span> Web Accessibility, API:s, mob-programming,
         pair-programming, Github.
       </p>
     </section>
 
     <!-------------- FEATURED PROJECTS -------------->
-    <!-- TODO: Make this section JS-based -->
     <section class="featured-projects field gray">
-      <h2 class="featured-projects--header heading">Featured Projects</h2>
+      <h2 class="heading">Featured Projects</h2>
       <div class="featured-projects--wrapper">
-          <article class="featured-1">
-            <img src="./images/karin-nordkvist-smoothday.png" alt="Image of Smooth Day Website" class="featured-1--img">
+          <!-- FEATURED 1 -->
+          <article class="featured-1 featured">
+            <div class="featured--img--wrapper">
+                <img src="./images/karin-nordkvist-smoothday.png" alt="Image of Smooth Day Website" class="featured--img">
+                <div class="featured--img--box"><p class="featured--img--title">Smoothie Mixer</p></div>
+            </div>
+            <p class="featured--text">
+                <span class="featured--title">Randomized smoothie-mixer built in Javascript</span>  
+                Responsive website where you can randomize a smoothierecipe, select a favourite fruit and reveal a recipe. <a href="https://smoothday.netlify.app" target="_blank" rel="noopener" rel="noreferrer">>></a>
+            </p>
+            <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+          </article>
+          <!-- FEATURED 2 -->
+          <article class="featured-2 featured">
+            <div class="featured--img--wrapper">
+                <img src="./images/karin-nordkvist-pizza.png" alt="Image of Pizzabot-website" class="featured--img">
+                <div class="featured--img--box"><p class="featured--img--title">Pizza bot</p></div>
+            </div>
             <p class="featured--text">
                 <span class="featured--title">Chat bot built in Javascript</span>  
-                Responsive web site using HTML, CSS and JavaScript ES6 for pizza orders. <a href="">>></a>
+                Responsive website with chat bot-layout for ordering pizza. Featuring a countdown timer, forms and sticky navbar. <a href="https://pizzeria-sliceandsnack-bot.netlify.app/" target="_blank" rel="noopener" rel="noreferrer">>></a>
             </p>
-            <div class="codebox">HTML5</div>
+            <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
           </article>
-          <article class="featured-2">
-            <img src="./images/karin-nordkvist-pizza.png" alt="Image of Pizzabot-website" class="featured-2--img">
+          <!-- FEATURED 3 -->
+          <article class="featured-3 featured">
+            <div class="featured--img--wrapper">
+                <img src="./images/karin-nordkvist-inseason.png" alt="Image of Inseason website" class="featured--img">
+                <div class="featured--img--box"><p class="featured--img--title">In-season florals</p></div>
+            </div>
             <p class="featured--text">
-                <span class="featured--title">Chat bot built in Javascript</span>  
-                Responsive web site using HTML, CSS and JavaScript ES6 for pizza orders. <a href="">>></a>
+                <span class="featured--title">Responsive flexbox-site</span>  
+                A news site for seasonal flowers built with focus on Flexbox and CSS Grid. <a href="https://in-season-florals.netlify.app" target="_blank" rel="noopener" rel="noreferrer">>></a>
             </p>
+            <div class="codebox">HTML5</div><div class="codebox">CSS3</div>
           </article>
-          <article class="featured-3">
-            <img src="./images/karin-nordkvist-inseason.png" alt="Image of Inseason website" class="featured-1--img">
+          <!-- FEATURED 4 -->
+          <article class="featured-4 featured">
+            <div class="featured--img--wrapper">
+                <img src="./images/karin-nordkvist-weatherbug3.png" alt="Image of Weatherbug website" class="featured--img">
+                <div class="featured--img--box"><p class="featured--img--title">Weather App</p></div>
+            </div>
             <p class="featured--text">
-                <span class="featured--title">Chat bot built in Javascript</span>  
-                Responsive web site using HTML, CSS and JavaScript ES6 for pizza orders. <a href="">>></a>
-            </p>
-          </article>
-          <article class="featured-4">
-            <img src="./images/karin-nordkvist-weatherbug3.png" alt="Image of Weatherbug website" class="featured-1--img">
-            <p class="featured--text">
-                <span class="featured--title">Weather App</span>  
-                Weather App built in Javascript using OpenWeather API. <a href="">>></a>
+                <span class="featured--title">Responsive API-based weather app</span>  
+                Built with HTML, CSS and Javascript, featuring a search bar, geolocation, a cute weather-approporiate gif while fetching data from Openweather API. <a href="https://weatherbug.netlify.app" target="_blank" rel="noopener" rel="noreferrer">>></a>
+                <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div><div class="codebox">API</div>
             </p>
           </article>
       </div>
 
-      <!-- More featured projects -->
-      <h3 class="featured-projects--subhead subheading">Other Projects</h3>
-      <div class="other-projects--wrapper">
-        <div class="other-projects--project-wrapper">
-            <p class="featured--text">
-            <span class="featured--title">Chat bot built in Javascript</span>  
-            Responsive web site using HTML, CSS and JavaScript ES6 for pizza orders. <a href="">>></a>
-            </p>
-            <div class="codebox">HTML5</div>
-        </div>
-        <div class="other-projects--project-wrapper">
-            <p class="featured--text">
-            <span class="featured--title">Chat bot built in Javascript</span>  
-            Responsive web site using HTML, CSS and JavaScript ES6 for pizza orders. <a href="">>></a>
-            </p>
-            <div class="codebox">HTML5</div>
-        </div>
-      </div>
+        <!-- More featured projects -->
+        <article class="featured--other-projects">
+            <h3 class="subheading">Other Projects</h3>
+                <div class="other-projects--project-wrapper">
+                    <p class="featured--text">
+                    <span class="featured--title">Business website with a form and accordion</span>  
+                    Responsive site with a form to submit secrets, a hero featuring a movie, and a faq-accordion. <a href="https://secretsanonymous.netlify.app/" target="_blank" rel="noopener" rel="noreferrer">>></a>
+                    </p>
+                    <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+                </div>
+        </article>
     </section>
 
     <!------------------ THOUGHTS ------------------>
     <section class="thoughts field">
-      <h2 class="thoughts--heading heading">My thoughts on code</h2>
+      <h2 class="heading">My thoughts on code</h2>
 
       <article class="thoughts--wrapper">
-        <div class="thoughts--one">
-          <img class="thoughts--img" src="./images/placeholder.png" alt="Placeholding image" />
-          <p class="thoughts--date">Dec 2019</p>
-          <h4 class="thoughts--header">How to stop being scared: Learning how to love code</h4>
-          <p class="thoughts--text">Writing code is less about “just working”. Instead, it’s much more about creativity. It’s similar to creative writing in that the author architecting a story must use an assortment of tools and components (i.e., content) in such a way to satisfy a particular objective. <a href="">>></a></p>
+        <div class="thought">
+          <img class="thought--img" src="./images/placeholder.png" alt="Placeholding image" />
+          <p class="thought--date">Dec 2019</p>
+          <h4 class="thought--header">How to stop being scared: Learning how to love code</h4>
+          <p class="thought--text">Writing code is less about “just working”. Instead, it’s much more about creativity. It’s similar to creative writing in that the author architecting a story must use an assortment of tools and components (i.e., content) in such a way to satisfy a particular objective. <a href="">>></a></p>
         </div>
-        <div class="thoughts--two">
-          <img class="thoughts--img" src="./images/placeholder.png" alt="Placeholding image" />
-          <p class="thoughts--date">Dec 2019</p>
-          <h4 class="thoughts--header">How to stop being scared: Learning how to love code</h4>
-          <p class="thoughts--text">Writing code is less about “just working”. Instead, it’s much more about creativity. It’s similar to creative writing in that the author architecting a story must use an assortment of tools and components (i.e., content) in such a way to satisfy a particular objective. <a href="">>></a></p>
+        <div class="thought">
+          <img class="thought--img" src="./images/placeholder.png" alt="Placeholding image" />
+          <p class="thought--date">Dec 2019</p>
+          <h4 class="thought--header">How to stop being scared: Learning how to love code</h4>
+          <p class="thought--text">Writing code is less about “just working”. Instead, it’s much more about creativity. It’s similar to creative writing in that the author architecting a story must use an assortment of tools and components (i.e., content) in such a way to satisfy a particular objective. <a href="">>></a></p>
         </div>
       </article>
 
@@ -215,20 +222,20 @@
       <div class="for-more--wrapper">
         <a href="https://www.linkedin.com/in/karin-nordkvist/" target="_blank" rel="noopener" rel="noreferrer">
             <article class="linkedin">
-            <div class="icon--red"><img src="./images/linkedin-gray.svg" alt="Linkedin logo" /></div>
-            <h5 class="for-more--header">LinkedIn</h5>
+            <div class="icon--gray"><img src="./images/linkedin-gray.svg" alt="Linkedin logo" /></div>
+            <h5 class="for-more--title">LinkedIn</h5>
             </article>
         </a>
         <a href="https://github.com/karinnordkvist" target="_blank" rel="noopener" rel="noreferrer">
             <article class="github">
-            <div class="icon--red"><img src="./images/github-gray.svg" alt="Github logo" /></div>
-            <h5 class="for-more--header">Github</h5>
+            <div class="icon--gray"><img src="./images/github-gray.svg" alt="Github logo" /></div>
+            <h5 class="for-more--title">Github</h5>
             </article>
         </a>    
         <a href="https://karinnordkvist.se" target="_blank" rel="noopener" rel="noreferrer">
             <article class="stackoverflow">
-            <div class="icon--red"><img src="./images/design-portfolio-gray.png" alt="Design Portfolio logo" /></div>
-            <h5 class="for-more--header">Design work</h5>
+            <div class="icon--gray"><img src="./images/design-portfolio-gray.png" alt="Design Portfolio logo" /></div>
+            <h5 class="for-more--title">Design portfolio</h5>
             </article>
         </a>
       </div>

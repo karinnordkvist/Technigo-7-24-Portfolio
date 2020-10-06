@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 $maincolor: #7f78fa;
-$secondarycolor: #e8b3c2;
+$secondarycolor: #fddfe7;
 $gray: #303030;
 $mainfont: 'Montserrat', sans-serif;
 $secondaryfont: 'Roboto', sans-serif;
@@ -57,6 +57,7 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: 15px;
   color: $maincolor;
+  text-align: center;
 }
 
 h5 {
@@ -173,6 +174,32 @@ h5 {
 
 /* ----------------------------- HELLO -----------------------------  */
 
+.stroke-circle--wrapper {
+  display: inline;
+}
+
+.stroke-circle {
+  display: flex;
+  align-items: center;
+}
+
+.stroke {
+  width: 45px;
+  height: 2px;
+  background: $maincolor;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $maincolor;
+  display: inline-block;
+  margin-bottom: 1px;
+}
+
 .hello--img {
   width: 55px;
   margin-right: 15px;
@@ -208,16 +235,38 @@ h5 {
   row-gap: 30px;
 }
 
-.featured-1--img,
-.featured-2--img {
+.featured--img--wrapper {
+  position: relative;
+}
+
+.featured--img {
   width: 100%;
 }
 
-.featured-1--img:hover,
-.featured-2--img:hover {
-  background: #021371 0% 0% no-repeat padding-box;
-  opacity: 0.38;
-  cursor: pointer;
+.featured--img--box {
+  position: absolute;
+  top: 0;
+  background: rgba(2, 19, 113, 0.4);
+  background-size: cover;
+  width: 100%;
+  height: 99%;
+}
+
+.featured--img--box:hover {
+  background: rgba(2, 19, 113, 0);
+  .featured--img--title {
+    display: none;
+  }
+}
+
+.featured--img--title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .featured--title {
@@ -237,7 +286,7 @@ h5 {
 
 .codebox {
   padding: 6px 10px 5px 10px;
-  margin-top: 8px;
+  margin: 8px 5px 0 0;
   background: #fddfe7;
   color: #2b2e34;
   display: inline-block;
@@ -246,7 +295,8 @@ h5 {
   font-size: 10px;
 }
 
-.other-projects--wrapper {
+.featured--other-projects {
+  margin-top: 40px;
   width: 60vw;
 }
 
@@ -261,12 +311,12 @@ h5 {
   row-gap: 30px;
 }
 
-.thoughts--img {
+.thought--img {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.thoughts--date,
+.thought--date,
 .more-thoughts--date {
   font-family: $secondaryfont;
   font-weight: 400;
@@ -277,13 +327,13 @@ h5 {
   text-transform: uppercase;
 }
 
-.thoughts--header {
+.thought--header {
   font-family: $secondaryfont;
   font-size: 20px;
   line-height: 1.6;
 }
 
-.thoughts--text {
+.thought--text {
   @include robotoText;
   font-weight: 400;
 }
@@ -334,10 +384,9 @@ li {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  width: 35vw;
 }
 
-.for-more--header {
+.for-more--title {
   font-weight: 700;
 }
 
@@ -346,14 +395,15 @@ li {
 .stackoverflow {
   @include flexCenter;
   flex-direction: column;
+  width: 180px;
 }
 
-.icon--red {
+.icon--gray {
   width: 80px;
   height: 80px;
   border: 2px solid #303030;
   border-radius: 50%;
-  margin: 0 0 20px 8px;
+  margin: 0 0 20px 0;
   @include flexCenter;
   cursor: pointer;
 }
