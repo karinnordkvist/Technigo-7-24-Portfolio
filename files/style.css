@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   font-weight: 700;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #303030;
   margin: auto;
 }
 
 a {
-  color: red;
+  color: #7f78fa;
+}
+
+a:hover {
+  color: #303030;
 }
 
 .heading {
   text-transform: uppercase;
-  background: red;
+  background: #7f78fa;
   padding: 3px 5px;
   display: inline-block;
   color: #fff;
@@ -33,16 +35,17 @@ a {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 15px;
-  color: red;
+  color: #7f78fa;
+  text-align: center;
 }
 
 h5 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1.05px;
   text-transform: uppercase;
-  color: red;
+  color: #7f78fa;
   margin-bottom: 10px;
 }
 
@@ -51,18 +54,37 @@ h5 {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+}
+
+.gray {
+  background: #f4f4f4;
 }
 
 .bold {
   font-weight: 700;
 }
 
+.bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.pink {
+  color: #e8b3c2;
+}
+
+.mobile {
+  display: none;
+}
+
 /* ----------------------------- HEADER -----------------------------  */
 .header {
   width: 100%;
   height: 45vh;
-  background: url(./images/header-image.png);
+  background: url(../images/header-image.webp);
+  background-size: cover;
   display: flex;
 }
 
@@ -73,27 +95,6 @@ h5 {
   align-items: flex-start;
 }
 
-.icons {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  width: 45px;
-  height: 45px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  margin-left: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.icons img {
-  width: 18px;
-}
-
 .introtext {
   width: 60vw;
   margin: 85px auto 0 auto;
@@ -101,7 +102,7 @@ h5 {
 }
 
 .introtext--name {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 1.05px;
@@ -112,7 +113,6 @@ h5 {
 
 .introtext--title {
   font-weight: 700;
-  width: 70%;
   font-size: 54px;
   text-transform: lowercase;
   color: #fff;
@@ -123,6 +123,28 @@ h5 {
   font-size: 36px;
   color: #fff;
   margin-top: 10px;
+}
+
+.header--icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #7f78fa;
+  border-radius: 50%;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header--icons img {
+  width: 18px;
 }
 
 .intro--image {
@@ -145,20 +167,20 @@ h5 {
 }
 
 .stroke {
-  width: 50px;
+  width: 45px;
   height: 2px;
-  background: red;
+  background: #7f78fa;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .circle {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: red;
-}
-
-.hello {
-  background: #f4f4f4;
+  background: #7f78fa;
+  display: inline-block;
+  margin-bottom: 1px;
 }
 
 .hello--img {
@@ -175,7 +197,6 @@ h5 {
 }
 
 /* ----------------------------- TECH -----------------------------  */
-
 .tech--text {
   width: 60vw;
   font-size: 20px;
@@ -184,11 +205,8 @@ h5 {
   margin: auto;
   text-align: center;
 }
-/* ----------------------------- FEATURED PR -----------------------------  */
-.featured-projects {
-  background: #f4f4f4;
-}
 
+/* ----------------------------- FEATURED PR -----------------------------  */
 .featured-projects--wrapper {
   max-width: 60vw;
   margin: 0 0 50px 0;
@@ -199,50 +217,73 @@ h5 {
   row-gap: 30px;
 }
 
-.featured-1--img,
-.featured-2--img {
+.featured--img--wrapper {
+  position: relative;
+}
+
+.featured--img {
   width: 100%;
 }
 
-.featured-1--img:hover,
-.featured-2--img:hover {
-  background: #021371 0% 0% no-repeat padding-box;
-  opacity: 0.38;
-  cursor: pointer;
+.featured--img--box {
+  position: absolute;
+  top: 0;
+  background: rgba(2, 19, 113, 0.4);
+  background-size: cover;
+  width: 100%;
+  height: 99%;
+}
+
+.featured--img--box:hover {
+  background: rgba(2, 19, 113, 0);
+}
+
+.featured--img--box:hover .featured--img--title {
+  display: none;
+}
+
+.featured--img--title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .featured--title {
   font-weight: 700;
   letter-spacing: 0;
-  color: red;
+  color: #7f78fa;
   text-transform: uppercase;
 }
 
 .featured--text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin-top: 20px;
 }
 
 .codebox {
   padding: 6px 10px 5px 10px;
-  margin-top: 8px;
+  margin: 8px 5px 0 0;
   background: #fddfe7;
   color: #2b2e34;
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 10px;
 }
 
-.other-projects--wrapper {
+.featured--other-projects {
+  margin-top: 40px;
   width: 60vw;
 }
 
 /* ----------------------------- THOUGHTS -----------------------------  */
-
 .thoughts--wrapper {
   max-width: 60vw;
   margin: 0 0 50px 0;
@@ -252,53 +293,48 @@ h5 {
   row-gap: 30px;
 }
 
-.thoughts--img {
+.thought--img {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.thoughts--date,
+.thought--date,
 .more-thoughts--date {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
-  color: red;
+  color: #7f78fa;
   text-transform: uppercase;
 }
 
-.thoughts--header {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+.thought--header {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
   line-height: 1.6;
 }
 
-.thoughts--text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+.thought--text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 .more-thoughts--wrapper {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   width: 60vw;
 }
 
 .more-thoughts--text {
-  font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.6;
   margin: 0;
 }
 
 /* ----------------------------- SKILLS -----------------------------  */
-
-.skills {
-  background: #f4f4f4;
-}
-
 .skills--wrapper {
   display: flex;
   width: 60vw;
@@ -313,6 +349,10 @@ h5 {
   font-weight: 700;
 }
 
+.space-top {
+  margin-top: 30px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -323,21 +363,18 @@ ul {
 .skill--text,
 ul,
 li {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
 }
 
 /* ----------------------------- FOR MORE -----------------------------  */
-
 .for-more--wrapper {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  width: 35vw;
 }
 
-.for-more--header {
+.for-more--title {
   font-weight: 700;
 }
 
@@ -346,16 +383,17 @@ li {
 .stackoverflow {
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
+  width: 180px;
 }
 
-.icon--red {
+.icon--gray {
   width: 80px;
   height: 80px;
-  border: 2px solid red;
+  border: 2px solid #303030;
   border-radius: 50%;
-  margin: 0 0 20px 8px;
+  margin: 0 0 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,12 +412,12 @@ li {
 
 /* ----------------------------- CONTACT -----------------------------  */
 .contact {
-  background: #072bce;
-  color: #fff;
+  background: #fddfe7;
+  color: #303030;
 }
 
 .contact--header {
-  color: #fff;
+  color: #303030;
 }
 
 .contact--info {
@@ -387,3 +425,53 @@ li {
   font-size: 18px;
   font-weight: 400;
 }
+
+.contact--info .desktop,
+.contact--info a {
+  font-weight: 400;
+}
+
+/* ----------------------------- MEDIA QUERIES -----------------------------  */
+@media (max-width: 800px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .field {
+    padding: 60px;
+  }
+  .header-wrapper,
+  .hello--text,
+  .tech--text,
+  .featured--other-projects,
+  .more-thoughts--wrapper,
+  .skills--wrapper {
+    width: 80vw;
+  }
+  .featured-projects--wrapper,
+  .thoughts--wrapper {
+    max-width: 80vw;
+    grid-template-columns: 1fr;
+  }
+  .intro--image {
+    right: 9vw;
+    top: 17vh;
+  }
+  .skills--wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .skill {
+    width: 50%;
+  }
+  .more {
+    align-self: end;
+    margin-top: -80px;
+  }
+  .thought--2 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

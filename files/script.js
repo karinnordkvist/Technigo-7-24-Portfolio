@@ -34,23 +34,21 @@ const projects = [
   },
 ];
 
-console.log(projects);
-
-class projectTemplate {
-  constructor(
-    projectnName,
-    projectDescription,
-    projectInformation,
-    projectImage,
-    projectTag
-  ) {
-    this.projectName = projectnName;
-    this.projectDescription = projectDescription;
-    this.projectInformation = projectInformation;
-    this.projectImage = projectImage;
-    this.projectTag = projectTag;
-  }
-}
+// class projectTemplate {
+//   constructor(
+//     projectnName,
+//     projectDescription,
+//     projectInformation,
+//     projectImage,
+//     projectTag
+//   ) {
+//     this.projectName = projectnName;
+//     this.projectDescription = projectDescription;
+//     this.projectInformation = projectInformation;
+//     this.projectImage = projectImage;
+//     this.projectTag = projectTag;
+//   }
+// }
 
 // const generateProjectInfo = (projects) => {
 //   const projectInfo = projects.map((item) => {

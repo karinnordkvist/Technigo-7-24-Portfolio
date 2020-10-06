@@ -10,37 +10,52 @@
     <meta property="og:site_name" content="Karin Nordkvist Portfolio" />
     <meta property="og:image" content="./images/karin-nordkvist-og-image.jpg" />
     <title>Karin Nordkvist - Frontend Developer</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./files/style.css" />
+    <link rel="stylesheet" href="./files/sr-only.css" />
     <!-- <link rel="icon" type="image/png" href="./images/karin.png"> -->
   </head>
   <body>
     <header class="header">
+    <!-- Accessibility: Span for alt-text to css-backround image. -->
+      <span class="background-image" role="img" aria-label="Image of a pink sky with clouds"></span>
       <div class="header-wrapper">
+        <!-- Name + title -->
         <section class="introtext">
-          <p class="introtext--name">
-            portfolio: <span class="bold">Karin Nordkvist</span>
-          </p>
-          <h1 class="introtext--title">Frondend Developer</h1>
-          <p class="introtext--subtitle">+ designer</p>
+            <p class="introtext--name">
+              portfolio: <span class="bold">Karin Nordkvist</span>
+            </p>
+            <h1 class="introtext--title">Frontend Developer</h1>
+            <p class="introtext--subtitle">+ designer</p>
         </section>
+        <!-- Icons -->
         <section class="header--icons">
-          <div class="icon">
-            <img src="./images/linkedin-blue.svg" alt="Linkedin logo" />
-          </div>
-          <div class="icon">
-            <img src="./images/github-blue.svg" alt="Github logo" />
-          </div>
-          <div class="icon">
-            <img src="./images/design-portfolio-blue.png" alt="Design Portfolio logo" />
-          </div>
+          <a href="https://www.linkedin.com/in/karin-nordkvist/" target="_blank" rel="noopener" rel="noreferrer">
+              <span class="sr-only">Linkedin</span>
+              <div class="icon">
+              <img src="./images/linkedin-blue.svg" alt="Linkedin logo" />
+              </div>
+          </a>
+          <a href="https://github.com/karinnordkvist" target="_blank" rel="noopener" rel="noreferrer">
+            <span class="sr-only">Github</span>
+              <div class="icon">
+              <img src="./images/github-blue.svg" alt="Github logo" />
+              </div>
+          </a>
+          <a href="https://karinnordkvist.se" target="_blank" rel="noopener" rel="noreferrer">
+            <span class="sr-only">Design Portfolio</span>
+              <div class="icon">
+              <img src="./images/design-portfolio-blue.png" alt="Design Portfolio logo" />
+              </div>
+          </a>
         </section>
       </div>
     </header>
 
+    <!-- Portrait -->
     <img
       class="intro--image"
       src="./images/karin.webp"
-      alt="Portrait of Karin"
+      alt="Portrait of Karin Nordkvist"
     />
 
     <!------------------ HELLO ------------------>
@@ -60,7 +75,7 @@
       <h2 class="heading">Tech</h2>
       <p class="tech--text">
         HTML5, CSS3, <span class="bold-italic pink">Sass,</span> JavaScript, 
-        <span class="bold-italic pink">ES6, API:s,</span> Web Accessibility, Mob-programming,
+        <span class="bold-italic pink">ES6, API:s,</span> Wordpress, WooCommerce, Web Accessibility, Mob-programming,
         Pair-programming, Github, Command Line.
       </p>
     </section>
@@ -72,49 +87,62 @@
           <!-- FEATURED 1 -->
           <article class="featured-1 featured">
             <div class="featured--img--wrapper">
-                <img src="./images/karin-nordkvist-smoothday.png" alt="Image of Smooth Day Website" class="featured--img">
+                <img src="./images/karin-nordkvist-smoothday.webp" alt="Image of Smooth Day Website" class="featured--img">
                 <div class="featured--img--box"><p class="featured--img--title">Smoothie Mixer</p></div>
             </div>
             <p class="featured--text">
                 <span class="featured--title">Randomized smoothie-mixer built in Javascript</span>  
-                Responsive website where you can randomize a smoothierecipe, select a favourite fruit and reveal a recipe. <a href="https://smoothday.netlify.app" target="_blank" rel="noopener" rel="noreferrer">>></a>
+                Responsive website where you can randomize a smoothierecipe, select a favourite fruit and reveal a recipe. 
+                <a href="https://smoothday.netlify.app" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open SmoothDay Website</span>>></a>
             </p>
-            <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+            <div class="codeboxes" aria-hidden="true">
+              <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+            </div>
           </article>
           <!-- FEATURED 2 -->
           <article class="featured-2 featured">
             <div class="featured--img--wrapper">
-                <img src="./images/karin-nordkvist-pizza.png" alt="Image of Pizzabot-website" class="featured--img">
+                <img src="./images/karin-nordkvist-pizza.webp" alt="Image of Pizzabot-website" class="featured--img">
                 <div class="featured--img--box"><p class="featured--img--title">Pizza bot</p></div>
             </div>
             <p class="featured--text">
                 <span class="featured--title">Chat bot built in Javascript</span>  
-                Responsive website with chat bot-layout for ordering pizza. Featuring a countdown timer, forms and sticky navbar. <a href="https://pizzeria-sliceandsnack-bot.netlify.app/" target="_blank" rel="noopener" rel="noreferrer">>></a>
+                Responsive website with chat bot-layout for ordering pizza. Featuring a countdown timer, forms and sticky navbar. 
+                <a href="https://pizzeria-sliceandsnack-bot.netlify.app/" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open Pizzabot Website</span>>></a>
             </p>
-            <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+            <div class="codeboxes" aria-hidden="true">
+              <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+            </div>
           </article>
           <!-- FEATURED 3 -->
           <article class="featured-3 featured">
             <div class="featured--img--wrapper">
-                <img src="./images/karin-nordkvist-inseason.png" alt="Image of Inseason website" class="featured--img">
+                <img src="./images/karin-nordkvist-inseason.webp" alt="Image of Inseason website" class="featured--img">
                 <div class="featured--img--box"><p class="featured--img--title">In-season florals</p></div>
             </div>
             <p class="featured--text">
                 <span class="featured--title">Responsive flexbox-site</span>  
-                A news site for seasonal flowers built with focus on Flexbox and CSS Grid. <a href="https://in-season-florals.netlify.app" target="_blank" rel="noopener" rel="noreferrer">>></a>
+                A news site for seasonal flowers built with focus on Flexbox and CSS Grid. 
+                <a href="https://in-season-florals.netlify.app" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open In-Season Website</span>>></a>
             </p>
-            <div class="codebox">HTML5</div><div class="codebox">CSS3</div>
+            <div class="codeboxes" aria-hidden="true">
+              <div class="codebox">HTML5</div><div class="codebox">CSS3</div>
+            </div>
           </article>
           <!-- FEATURED 4 -->
           <article class="featured-4 featured">
             <div class="featured--img--wrapper">
-                <img src="./images/karin-nordkvist-weatherbug3.png" alt="Image of Weatherbug website" class="featured--img">
+                <img src="./images/karin-nordkvist-weatherbug3.webp" alt="Image of Weatherbug website" class="featured--img">
                 <div class="featured--img--box"><p class="featured--img--title">Weather App</p></div>
             </div>
             <p class="featured--text">
                 <span class="featured--title">Responsive API-based weather app</span>  
-                Built with HTML, CSS and Javascript, featuring a search bar, geolocation, a cute weather-approporiate gif while fetching data from Openweather API. <a href="https://weatherbug.netlify.app" target="_blank" rel="noopener" rel="noreferrer">>></a>
-                <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div><div class="codebox">API</div>
+                Built with HTML, CSS and Javascript, featuring a search bar, geolocation, a cute weather-approporiate gif 
+                while fetching data from Openweather API. 
+                <a href="https://weatherbug.netlify.app" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open WeatherBug Website</span>>></a>
+                <div class="codeboxes" aria-hidden="true">
+                  <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div><div class="codebox">API</div>
+                </div>
             </p>
           </article>
       </div>
@@ -124,10 +152,47 @@
             <h3 class="subheading">Other Projects</h3>
                 <div class="other-projects--project-wrapper">
                     <p class="featured--text">
-                    <span class="featured--title">Business website with a form and accordion</span>  
-                    Responsive site with a form to submit secrets, a hero featuring a movie, and a faq-accordion. <a href="https://secretsanonymous.netlify.app/" target="_blank" rel="noopener" rel="noreferrer">>></a>
+                        <span class="featured--title">Secrets Anonymous</span>  
+                        Responsive site with a form to submit secrets, hero with a video-background, and a faq-accordion. 
+                        <a href="https://secretsanonymous.netlify.app/" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open Secret Anonymous Website</span>>></a>
                     </p>
-                    <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+                    <div class="codeboxes" aria-hidden="true">
+                      <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Javascript ES6</div>
+                    </div>
+                </div>
+
+                <div class="other-projects--project-wrapper">
+                    <p class="featured--text">
+                        <span class="featured--title">Doula Lagergren</span>  
+                        Basic onepage site presenting Angelica Lagergren, a Doula in Stockholm, and her services. 
+                        Built with Elementor in Wordpress. 
+                        <a href="#" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open Doula Lagergren Website</span>>></a>
+                    </p>
+                    <div class="codeboxes" aria-hidden="true">
+                      <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Wordpress</div><div class="codebox">Elementor</div>
+                    </div>
+                </div>
+
+                <div class="other-projects--project-wrapper">
+                    <p class="featured--text">
+                        <span class="featured--title">Vattnet Går</span>  
+                        Business website for podcast/community Vattnet Går. Design, Graphic Profile and development made by me. Built with Elementor in Wordpress.
+                        <a href="https://vattnetgar.se/" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open Vattnet Går Website</span>>></a>
+                    </p>
+                    <div class="codeboxes" aria-hidden="true">
+                      <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Wordpress</div><div class="codebox">Elementor</div><div class="codebox">MailChimp</div>
+                    </div>
+                </div>
+                
+                <div class="other-projects--project-wrapper">
+                    <p class="featured--text">
+                        <span class="featured--title">Teenytiny</span>  
+                        Webshop for me and my friend Andrea's side project Teenytiny. Built in Wordpress featuring WooCommerce and Klarna plugins.
+                        <a href="https://teenytinyuniverse.se/" target="_blank" rel="noopener" rel="noreferrer"><span class="sr-only">Open Teenytiny Website</span>>></a>
+                    </p>
+                    <div class="codeboxes" aria-hidden="true">
+                      <div class="codebox">HTML5</div><div class="codebox">CSS3</div><div class="codebox">Wordpress</div><div class="codebox">Woocommerce</div><div class="codebox">Klarna</div>
+                    </div>
                 </div>
         </article>
     </section>
@@ -137,13 +202,13 @@
       <h2 class="heading">My thoughts on code</h2>
 
       <article class="thoughts--wrapper">
-        <div class="thought">
+        <div class="thought thought--1">
           <img class="thought--img" src="./images/placeholder.png" alt="Placeholding image" />
           <p class="thought--date">Dec 2019</p>
           <h4 class="thought--header">How to stop being scared: Learning how to love code</h4>
           <p class="thought--text">Writing code is less about “just working”. Instead, it’s much more about creativity. It’s similar to creative writing in that the author architecting a story must use an assortment of tools and components (i.e., content) in such a way to satisfy a particular objective. <a href="">>></a></p>
         </div>
-        <div class="thought">
+        <div class="thought thought--2">
           <img class="thought--img" src="./images/placeholder.png" alt="Placeholding image" />
           <p class="thought--date">Dec 2019</p>
           <h4 class="thought--header">How to stop being scared: Learning how to love code</h4>
@@ -182,8 +247,17 @@
                 <li>Javascript</li>
                 <li>ES6</li>
                 <li>Wordpress</li>
-                <li>Github</li>
+                <li>WooCommerce</li>
                 <li>Command Line</li>
+            </ul>
+          </p>
+
+          <h5 class="skill--header space-top">Upcoming</h5>
+          <p class="skill--text">
+            <ul>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Node.js</li>
             </ul>
           </p>
         </article>
@@ -192,6 +266,7 @@
           <p class="skill--text">
               <ul>
                   <li>VS Code</li>
+                  <li>Github</li>
                   <li>Figma</li>
                   <li>Sketch/Invision</li>
                   <li>Adobe Photoshop</li>
@@ -208,9 +283,10 @@
               <ul>
                   <li>UX</li>
                   <li>Design/Art Direction</li>
+                  <li>Editorial design</li>
                   <li>Image Editing</li>
                   <li>Affiliate marketing</li>
-                  <li>Print production/retouch</li>
+                  <li>Print production</li>
               </ul>
           </p>
         </article>
@@ -222,19 +298,22 @@
       <h2 class="for-more--header heading">For More</h2>
       <div class="for-more--wrapper">
         <a href="https://www.linkedin.com/in/karin-nordkvist/" target="_blank" rel="noopener" rel="noreferrer">
-            <article class="linkedin">
+            <span class="sr-only">Go to Linkedin-page</span>
+            <article class="linkedin" aria-hidden="true">
             <div class="icon--gray"><img src="./images/linkedin-gray.svg" alt="Linkedin logo" /></div>
             <h5 class="for-more--title">LinkedIn</h5>
             </article>
         </a>
         <a href="https://github.com/karinnordkvist" target="_blank" rel="noopener" rel="noreferrer">
-            <article class="github">
+            <span class="sr-only">Go to Github-page</span>
+            <article class="github" aria-hidden="true">
             <div class="icon--gray"><img src="./images/github-gray.svg" alt="Github logo" /></div>
             <h5 class="for-more--title">Github</h5>
             </article>
         </a>    
         <a href="https://karinnordkvist.se" target="_blank" rel="noopener" rel="noreferrer">
-            <article class="stackoverflow">
+            <span class="sr-only">Go to Design Portfolio</span>
+            <article class="stackoverflow" aria-hidden="true">
             <div class="icon--gray"><img src="./images/design-portfolio-gray.png" alt="Design Portfolio logo" /></div>
             <h5 class="for-more--title">Design portfolio</h5>
             </article>
@@ -247,7 +326,7 @@
       <h3 class="contact--header subheading">Contact</h3>
       <p class="contact--info">Karin Nordkvist</p>
       <p class="contact--info"><a class="mobile" href="+46721772777">+46 721 77 27 77</a><span class="desktop">+46 721 77 27 77</span></p>
-      <p class="contact--info"><a href="http://karinnordkvist">kontakt@karinnordkvist.se</p></a>
+      <p class="contact--info"><a href="mailto:kontakt@karinnordkvist.se">kontakt@karinnordkvist.se</p></a>
     </section>
 
     <script src="./files/script.js"></script>
