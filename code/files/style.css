@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   font-weight: 700;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -237,7 +239,6 @@ h5 {
 .featured--img--box:hover {
   background: rgba(2, 19, 113, 0);
 }
-
 .featured--img--box:hover .featured--img--title {
   display: none;
 }
@@ -425,7 +426,6 @@ li {
   font-size: 18px;
   font-weight: 400;
 }
-
 .contact--info .desktop,
 .contact--info a {
   font-weight: 400;
@@ -436,98 +436,121 @@ li {
   .desktop {
     display: none;
   }
+
   .mobile {
     display: block;
   }
+
   .field {
     padding: 80px 0;
   }
+
   .header {
     height: 70vh;
     background-position-x: center;
   }
+
   .header-wrapper {
     margin: 100px auto;
   }
+
   .header-wrapper,
-  .hello--text,
-  .tech--text,
-  .featured--other-projects,
-  .more-thoughts--wrapper,
-  .skills--wrapper {
+.hello--text,
+.tech--text,
+.featured--other-projects,
+.more-thoughts--wrapper,
+.skills--wrapper {
     width: 80vw;
   }
+
   .featured-projects--wrapper,
-  .thoughts--wrapper {
+.thoughts--wrapper {
     max-width: 80vw;
     grid-template-columns: 1fr;
   }
+
   .intro--image {
     right: 8vw;
     top: 50vh;
   }
+
   .introtext--title {
     font-size: 48px;
   }
+
   .introtext--subtitle {
     font-size: 32;
   }
+
   .bold {
     display: inline-block;
   }
+
   .skills--wrapper {
     flex-wrap: wrap;
     justify-content: flex-end;
   }
+
   .skill {
     width: 50%;
   }
+
   .featured {
     margin-bottom: 20px;
   }
+
   .more {
     align-self: end;
     margin-top: -80px;
   }
+
   .for-more--wrapper {
     align-items: flex-start;
   }
+
   .linkedin,
-  .github,
-  .stackoverflow {
+.github,
+.stackoverflow {
     width: 25vw;
     text-align: center;
   }
+
   .thought--2 {
     display: none;
   }
 }
-
 @media (max-width: 400px) {
   .header-wrapper {
     flex-direction: column-reverse;
     margin: 0 auto;
   }
+
   .introtext {
     margin: 100px 0 200px 0;
   }
+
   .header--icons {
     align-self: flex-end;
   }
+
   .intro--image {
     top: 52vh;
   }
+
   .linkedin img,
-  .github img,
-  .stackoverflow img {
+.github img,
+.stackoverflow img {
     width: 20px;
   }
+
   .icon--gray {
     width: 60px;
     height: 60px;
   }
+
   .for-more--title {
     font-size: 14px;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
