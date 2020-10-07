@@ -18,6 +18,16 @@ $secondaryfont: 'Roboto', sans-serif;
   justify-content: center;
 }
 
+@mixin robotoHeader {
+  font-family: $secondaryfont;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+  color: $maincolor;
+  margin-bottom: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,16 +70,6 @@ a:hover {
   text-align: center;
 }
 
-h5 {
-  font-family: $secondaryfont;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 1.05px;
-  text-transform: uppercase;
-  color: $maincolor;
-  margin-bottom: 10px;
-}
-
 .field {
   padding: 80px;
   width: 100%;
@@ -103,9 +103,15 @@ h5 {
 .header {
   width: 100%;
   height: 50vh;
-  background: url(../images/header-image.webp);
   background-size: cover;
   display: flex;
+  // SRC-set for Safari
+  background-image: url(../images/header-image.webp);
+  background-image: -webkit-image-set(url(../images/header-image-3.png) 1x);
+  background-image: image-set(
+    url(../images/header-image-3.webp) 1x,
+    url(../images/header-image-3.png) 2x
+  );
 }
 
 .header-wrapper {
@@ -173,16 +179,6 @@ h5 {
 }
 
 /* ----------------------------- HELLO -----------------------------  */
-
-.stroke-circle--wrapper {
-  display: inline;
-}
-
-.stroke-circle {
-  display: flex;
-  align-items: center;
-}
-
 .stroke {
   width: 45px;
   height: 2px;
@@ -197,7 +193,6 @@ h5 {
   border-radius: 50%;
   background: $maincolor;
   display: inline-block;
-  margin-bottom: 1px;
 }
 
 .hello--img {
@@ -265,6 +260,7 @@ h5 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 18px;
+  text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
@@ -301,6 +297,26 @@ h5 {
 }
 
 /* ----------------------------- THOUGHTS -----------------------------  */
+
+.thoughts {
+  position: relative;
+}
+
+.thoughts--cover {
+  position: absolute;
+  width: 93%;
+  height: 90%;
+  background: $secondarycolor;
+  opacity: 0.8;
+  display: flex;
+}
+
+.thoughts--cover--text {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
 
 .thoughts--wrapper {
   max-width: 60vw;
@@ -361,6 +377,7 @@ h5 {
 }
 
 .skill--header {
+  @include robotoHeader;
   font-weight: 700;
 }
 
@@ -391,6 +408,7 @@ li {
 }
 
 .for-more--title {
+  @include robotoHeader;
   font-weight: 700;
 }
 
@@ -471,7 +489,7 @@ li {
   }
 
   .introtext {
-    margin: 10% 0 45% 0;
+    margin: 10% 0 50% 0;
   }
 
   .header--icons {
@@ -561,10 +579,47 @@ li {
 
 @media (max-width: 400px) {
   .introtext {
-    margin: 100px 0 200px 0;
+    margin: 40px 0px 45% 0;
   }
 
   .intro--image {
     top: 52vh;
+  }
+}
+
+@media (max-width: 350px) {
+  .introtext {
+    margin: 35px 0px 110px 0;
+  }
+
+  .introtext--name {
+    font-size: 14px;
+  }
+
+  .introtext--title {
+    font-size: 36px;
+  }
+
+  .introtext--subtitle {
+    font-size: 22px;
+  }
+
+  .intro--image {
+    top: 50vh;
+    width: 150px;
+  }
+
+  .field {
+    padding: 50px 0;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .hello--text,
+  .tech--text,
+  .contact--info {
+    font-size: 16px;
   }
 }
