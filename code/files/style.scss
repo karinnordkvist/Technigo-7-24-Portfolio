@@ -461,10 +461,21 @@ li {
   .header {
     height: 70vh;
     background-position-x: center;
+    background-size: auto;
   }
 
   .header-wrapper {
     margin: 100px auto;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+  }
+
+  .introtext {
+    margin: 10% 0 45% 0;
+  }
+
+  .header--icons {
+    align-self: flex-end;
   }
 
   .header-wrapper,
@@ -485,6 +496,7 @@ li {
   .intro--image {
     right: 8vw;
     top: 50vh;
+    width: 180px;
   }
 
   .introtext--title {
@@ -492,7 +504,7 @@ li {
   }
 
   .introtext--subtitle {
-    font-size: 32;
+    font-size: 28px;
   }
 
   .bold {
@@ -530,25 +542,6 @@ li {
   .thought--2 {
     display: none;
   }
-}
-
-@media (max-width: 400px) {
-  .header-wrapper {
-    flex-direction: column-reverse;
-    margin: 0 auto;
-  }
-
-  .introtext {
-    margin: 100px 0 200px 0;
-  }
-
-  .header--icons {
-    align-self: flex-end;
-  }
-
-  .intro--image {
-    top: 52vh;
-  }
 
   .linkedin img,
   .github img,
@@ -563,5 +556,15 @@ li {
 
   .for-more--title {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .introtext {
+    margin: 100px 0 200px 0;
+  }
+
+  .intro--image {
+    top: 52vh;
   }
 }
