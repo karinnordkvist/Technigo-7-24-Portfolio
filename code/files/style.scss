@@ -5,22 +5,23 @@ $secondarycolor: #fddfe7;
 $gray: #303030;
 $mainfont: 'Montserrat', sans-serif;
 $secondaryfont: 'Roboto', sans-serif;
-
-@mixin robotoText {
-  font-family: $secondaryfont;
-  font-size: 16px;
-  line-height: 1.6;
-}
+$regular: 400;
+$bold: 700;
 
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@mixin robotoText {
+  font-family: $secondaryfont;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
 @mixin robotoHeader {
   font-family: $secondaryfont;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 16px;
   letter-spacing: 1.05px;
   text-transform: uppercase;
@@ -31,7 +32,7 @@ $secondaryfont: 'Roboto', sans-serif;
 * {
   margin: 0;
   padding: 0;
-  font-weight: 700;
+  font-weight: $bold;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -46,13 +47,15 @@ body {
 }
 
 a {
-  color: $maincolor;
+  color: $gray;
+  text-decoration: none;
 }
 
 a:hover {
-  color: $gray;
+  text-decoration: underline;
 }
 
+// All main headings
 .heading {
   text-transform: uppercase;
   background: $maincolor;
@@ -62,6 +65,7 @@ a:hover {
   margin-bottom: 40px;
 }
 
+// All subheadings
 .subheading {
   font-size: 20px;
   text-transform: uppercase;
@@ -70,6 +74,7 @@ a:hover {
   text-align: center;
 }
 
+// All fields/sections
 .field {
   padding: 80px;
   width: 100%;
@@ -77,16 +82,18 @@ a:hover {
   flex-direction: column;
 }
 
+// And those with gray bg
 .gray {
   background: #f4f4f4;
 }
 
+// Typography / text-coloring
 .bold {
-  font-weight: 700;
+  font-weight: $bold;
 }
 
 .bold-italic {
-  font-weight: 700;
+  font-weight: $bold;
   font-style: italic;
 }
 
@@ -94,8 +101,8 @@ a:hover {
   color: #e8b3c2;
 }
 
-.mobile {
-  display: none;
+.underline {
+  text-decoration: underline;
 }
 
 /* ----------------------------- HEADER -----------------------------  */
@@ -129,7 +136,7 @@ a:hover {
 
 .introtext--name {
   font-family: $secondaryfont;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 18px;
   letter-spacing: 1.05px;
   text-transform: uppercase;
@@ -138,14 +145,14 @@ a:hover {
 }
 
 .introtext--title {
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 54px;
   text-transform: lowercase;
   color: #fff;
 }
 
 .introtext--subtitle {
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 36px;
   color: #fff;
   margin-top: 10px;
@@ -204,7 +211,7 @@ a:hover {
   width: 60vw;
   font-size: 20px;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: $regular;
   margin: auto;
 }
 
@@ -214,10 +221,11 @@ a:hover {
   width: 60vw;
   font-size: 20px;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: $regular;
   margin: auto;
   text-align: center;
 }
+
 /* ----------------------------- FEATURED PR -----------------------------  */
 
 .featured-projects--wrapper {
@@ -228,6 +236,15 @@ a:hover {
   grid-template-rows: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
+
+  a {
+    color: $gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .featured--img--wrapper {
@@ -266,7 +283,7 @@ a:hover {
 }
 
 .featured--title {
-  font-weight: 700;
+  font-weight: $bold;
   letter-spacing: 0;
   color: $maincolor;
   text-transform: uppercase;
@@ -274,10 +291,11 @@ a:hover {
 
 .featured--text {
   font-family: $secondaryfont;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 16px;
   line-height: 1.6;
   margin-top: 20px;
+  max-width: 50vw;
 }
 
 .codebox {
@@ -287,13 +305,22 @@ a:hover {
   color: #2b2e34;
   display: inline-block;
   font-family: $secondaryfont;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 10px;
 }
 
 .featured--other-projects {
   margin-top: 40px;
   width: 60vw;
+
+  a {
+    color: $gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 /* ----------------------------- THOUGHTS -----------------------------  */
@@ -302,6 +329,7 @@ a:hover {
   position: relative;
 }
 
+// Coming soon-box
 .thoughts--cover {
   position: absolute;
   width: 93%;
@@ -309,13 +337,13 @@ a:hover {
   background: $secondarycolor;
   opacity: 0.8;
   display: flex;
-}
 
-.thoughts--cover--text {
-  font-size: 24px;
-  width: 100%;
-  text-align: center;
-  align-self: center;
+  .thoughts--cover--text {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+  }
 }
 
 .thoughts--wrapper {
@@ -335,7 +363,7 @@ a:hover {
 .thought--date,
 .more-thoughts--date {
   font-family: $secondaryfont;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -351,7 +379,7 @@ a:hover {
 
 .thought--text {
   @include robotoText;
-  font-weight: 400;
+  font-weight: $regular;
 }
 
 .more-thoughts--wrapper {
@@ -360,7 +388,7 @@ a:hover {
 }
 
 .more-thoughts--text {
-  font-weight: 700;
+  font-weight: $bold;
   margin: 0;
 }
 
@@ -378,7 +406,7 @@ a:hover {
 
 .skill--header {
   @include robotoHeader;
-  font-weight: 700;
+  font-weight: $bold;
 }
 
 .space-top {
@@ -396,7 +424,7 @@ ul {
 ul,
 li {
   font-family: $secondaryfont;
-  font-weight: 400;
+  font-weight: $regular;
 }
 
 /* ----------------------------- FOR MORE -----------------------------  */
@@ -409,12 +437,12 @@ li {
 
 .for-more--title {
   @include robotoHeader;
-  font-weight: 700;
+  font-weight: $bold;
 }
 
 .linkedin,
 .github,
-.stackoverflow {
+.portfolio {
   @include flexCenter;
   flex-direction: column;
   width: 180px;
@@ -430,9 +458,9 @@ li {
   cursor: pointer;
 }
 
-.linkedin img,
-.github img,
-.stackoverflow img {
+.linkedin--img,
+.github--img,
+.portfolio--img {
   width: 25px;
 }
 
@@ -453,29 +481,21 @@ li {
 .contact--info {
   padding: 5px;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: $regular;
 
   .desktop,
   a {
-    font-weight: 400;
+    font-weight: $regular;
   }
+}
+
+.mobile {
+  display: none;
 }
 
 /* ----------------------------- MEDIA QUERIES -----------------------------  */
 
 @media (max-width: 800px) {
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .field {
-    padding: 80px 0;
-  }
-
   .header {
     height: 70vh;
     background-position-x: center;
@@ -489,7 +509,7 @@ li {
   }
 
   .introtext {
-    margin: 10% 0 50% 0;
+    margin: 10% 0px 30% 0;
   }
 
   .header--icons {
@@ -505,6 +525,10 @@ li {
     width: 80vw;
   }
 
+  .field {
+    padding: 80px 0;
+  }
+
   .featured-projects--wrapper,
   .thoughts--wrapper {
     max-width: 80vw;
@@ -513,7 +537,7 @@ li {
 
   .intro--image {
     right: 8vw;
-    top: 50vh;
+    top: 52vh;
     width: 180px;
   }
 
@@ -541,6 +565,9 @@ li {
   .featured {
     margin-bottom: 20px;
   }
+  .featured--text {
+    max-width: unset;
+  }
 
   .more {
     align-self: end;
@@ -550,9 +577,10 @@ li {
   .for-more--wrapper {
     align-items: flex-start;
   }
+
   .linkedin,
   .github,
-  .stackoverflow {
+  .portfolio {
     width: 25vw;
     text-align: center;
   }
@@ -561,9 +589,9 @@ li {
     display: none;
   }
 
-  .linkedin img,
-  .github img,
-  .stackoverflow img {
+  .linkedin--img,
+  .github--img,
+  .portfolio--img img {
     width: 20px;
   }
 
@@ -575,18 +603,29 @@ li {
   .for-more--title {
     font-size: 14px;
   }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .introtext {
+    margin: 10% 0 50% 0;
+  }
 }
 
 @media (max-width: 400px) {
   .introtext {
     margin: 40px 0px 45% 0;
   }
-
-  .intro--image {
-    top: 52vh;
-  }
 }
 
+// For the itsy-bitsy screens
 @media (max-width: 350px) {
   .introtext {
     margin: 35px 0px 110px 0;

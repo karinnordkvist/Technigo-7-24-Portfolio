@@ -17,11 +17,12 @@ body {
 }
 
 a {
-  color: #7f78fa;
+  color: #303030;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #303030;
+  text-decoration: underline;
 }
 
 .heading {
@@ -67,8 +68,8 @@ a:hover {
   color: #e8b3c2;
 }
 
-.mobile {
-  display: none;
+.underline {
+  text-decoration: underline;
 }
 
 /* ----------------------------- HEADER -----------------------------  */
@@ -200,6 +201,13 @@ a:hover {
   column-gap: 30px;
   row-gap: 30px;
 }
+.featured-projects--wrapper a {
+  color: #303030;
+  text-decoration: none;
+}
+.featured-projects--wrapper a:hover {
+  text-decoration: underline;
+}
 
 .featured--img--wrapper {
   position: relative;
@@ -249,6 +257,7 @@ a:hover {
   font-size: 16px;
   line-height: 1.6;
   margin-top: 20px;
+  max-width: 50vw;
 }
 
 .codebox {
@@ -266,6 +275,13 @@ a:hover {
   margin-top: 40px;
   width: 60vw;
 }
+.featured--other-projects a {
+  color: #303030;
+  text-decoration: none;
+}
+.featured--other-projects a:hover {
+  text-decoration: underline;
+}
 
 /* ----------------------------- THOUGHTS -----------------------------  */
 .thoughts {
@@ -280,8 +296,7 @@ a:hover {
   opacity: 0.8;
   display: flex;
 }
-
-.thoughts--cover--text {
+.thoughts--cover .thoughts--cover--text {
   font-size: 24px;
   width: 100%;
   text-align: center;
@@ -398,7 +413,7 @@ li {
 
 .linkedin,
 .github,
-.stackoverflow {
+.portfolio {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -418,9 +433,9 @@ li {
   cursor: pointer;
 }
 
-.linkedin img,
-.github img,
-.stackoverflow img {
+.linkedin--img,
+.github--img,
+.portfolio--img {
   width: 25px;
 }
 
@@ -448,20 +463,12 @@ li {
   font-weight: 400;
 }
 
+.mobile {
+  display: none;
+}
+
 /* ----------------------------- MEDIA QUERIES -----------------------------  */
 @media (max-width: 800px) {
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .field {
-    padding: 80px 0;
-  }
-
   .header {
     height: 70vh;
     background-position-x: center;
@@ -475,7 +482,7 @@ li {
   }
 
   .introtext {
-    margin: 10% 0 50% 0;
+    margin: 10% 0px 30% 0;
   }
 
   .header--icons {
@@ -491,6 +498,10 @@ li {
     width: 80vw;
   }
 
+  .field {
+    padding: 80px 0;
+  }
+
   .featured-projects--wrapper,
 .thoughts--wrapper {
     max-width: 80vw;
@@ -499,7 +510,7 @@ li {
 
   .intro--image {
     right: 8vw;
-    top: 50vh;
+    top: 52vh;
     width: 180px;
   }
 
@@ -528,6 +539,10 @@ li {
     margin-bottom: 20px;
   }
 
+  .featured--text {
+    max-width: unset;
+  }
+
   .more {
     align-self: end;
     margin-top: -80px;
@@ -539,7 +554,7 @@ li {
 
   .linkedin,
 .github,
-.stackoverflow {
+.portfolio {
     width: 25vw;
     text-align: center;
   }
@@ -548,9 +563,9 @@ li {
     display: none;
   }
 
-  .linkedin img,
-.github img,
-.stackoverflow img {
+  .linkedin--img,
+.github--img,
+.portfolio--img img {
     width: 20px;
   }
 
@@ -562,14 +577,23 @@ li {
   .for-more--title {
     font-size: 14px;
   }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .introtext {
+    margin: 10% 0 50% 0;
+  }
 }
 @media (max-width: 400px) {
   .introtext {
     margin: 40px 0px 45% 0;
-  }
-
-  .intro--image {
-    top: 52vh;
   }
 }
 @media (max-width: 350px) {
