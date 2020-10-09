@@ -41,6 +41,10 @@
   white-space: nowrap !important; /* 3 */
 }
 
+.sr-nospeak {
+  speak: none;
+}
+
 /*
 	Use in conjunction with .sr-only to only display content when it's focused.
 	@note Useful for skip links 
