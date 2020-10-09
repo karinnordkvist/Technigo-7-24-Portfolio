@@ -41,40 +41,42 @@
           <p class="introtext--subtitle" tabindex="0">+ designer</p>
         </section>
         <!-- Icons -->
-        <section class="header--icons">
-          <a
-            href="https://www.linkedin.com/in/karin-nordkvist/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="sr-only">Linkedin</span>
-            <div class="icon">
-              <img src="./images/linkedin-blue.svg" alt="Linkedin logo" />
-            </div>
-          </a>
-          <a
-            href="https://github.com/karinnordkvist"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="sr-only">Github</span>
-            <div class="icon">
-              <img src="./images/github-blue.svg" alt="Github logo" />
-            </div>
-          </a>
-          <a
-            href="https://karinnordkvist.se"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="sr-only">Design Portfolio</span>
-            <div class="icon">
-              <img
-                src="./images/design-portfolio-blue.svg"
-                alt="Design Portfolio logo"
-              />
-            </div>
-          </a>
+        <section>
+          <h2 class="header--icons">
+            <a
+              href="https://www.linkedin.com/in/karin-nordkvist/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="sr-only">Linkedin</span>
+              <div class="icon">
+                <img src="./images/linkedin-blue.svg" alt="Linkedin logo" />
+              </div>
+            </a>
+            <a
+              href="https://github.com/karinnordkvist"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="sr-only">Github</span>
+              <div class="icon">
+                <img src="./images/github-blue.svg" alt="Github logo" />
+              </div>
+            </a>
+            <a
+              href="https://karinnordkvist.se"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="sr-only">Design Portfolio</span>
+              <div class="icon">
+                <img
+                  src="./images/design-portfolio-blue.svg"
+                  alt="Design Portfolio logo"
+                />
+              </div>
+            </a>
+          </h2>
         </section>
       </div>
     </header>
@@ -92,14 +94,15 @@
 
     <!-- HELLO -->
     <section class="hello field gray">
+      <h2 class="sr-only">Hello!</h2>
       <p class="hello--text" tabindex="0">
         <span class="stroke"></span><span class="circle"></span>
-        Hello! I'm a happy (and a bit nerdy &#129299;) conceptual creator with
-        roots in the Graphic Design Industry. I love solving problems, coming up
-        with creative solutions and make them come to life. Code has been a
-        friend of mine for years, but recently we started bonding and now we've
-        become best friends. &#128156; I feel like this is just the beginning of
-        something big...
+        <span class="regular" aria="hidden">Hello!</span> I'm a happy (and a bit
+        nerdy &#129299;) conceptual creator with roots in the Graphic Design
+        Industry. I love solving problems, coming up with creative solutions and
+        make them come to life. Code has been a friend of mine for years, but
+        recently we started bonding and now we've become best friends. &#128156;
+        I feel like this is just the beginning of something big...
       </p>
     </section>
 
@@ -143,7 +146,7 @@
                 />
               </picture>
               <div class="featured--img--box">
-                <p class="featured--img--title">Smoothie Mixer</p>
+                <h3 class="featured--img--title">Smoothie Mixer</h3>
               </div>
             </div>
             <p class="featured--text">
@@ -152,7 +155,9 @@
               >
               Responsive website where you can randomize a smoothierecipe,
               select a favourite fruit and reveal a recipe.
-              <span class="featured--title underline">>></span>
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -186,14 +191,16 @@
                 />
               </picture>
               <div class="featured--img--box">
-                <p class="featured--img--title">Pizza bot</p>
+                <h3 class="featured--img--title">Pizza bot</h3>
               </div>
             </div>
             <p class="featured--text">
               <span class="featured--title">Chat bot built in Javascript</span>
               Responsive website with chat bot-layout for ordering pizza.
               Featuring a countdown timer, forms and sticky navbar.
-              <span class="featured--title underline">>></span>
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -227,13 +234,16 @@
                 />
               </picture>
               <div class="featured--img--box">
-                <p class="featured--img--title">In-season florals</p>
+                <h3 class="featured--img--title">In-season florals</h3>
               </div>
             </div>
             <p class="featured--text">
               <span class="featured--title">Responsive flexbox-site</span>
               A news site for seasonal flowers built with focus on Flexbox and
-              CSS Grid. <span class="featured--title underline">>></span>
+              CSS Grid.
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -266,7 +276,7 @@
                 />
               </picture>
               <div class="featured--img--box">
-                <p class="featured--img--title">Weather App</p>
+                <h3 class="featured--img--title">Weather App</h3>
               </div>
             </div>
             <p class="featured--text">
@@ -276,7 +286,9 @@
               Built with HTML, CSS and Javascript, featuring a search bar,
               geolocation, a cute weather-approporiate gif while fetching data
               from Openweather API.
-              <span class="featured--title underline">>></span>
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -302,7 +314,9 @@
               <span class="featured--title">Secrets Anonymous</span>
               Responsive site with a form to submit secrets, hero with a
               video-background, and a faq-accordion.
-              <span class="featured--title underline">>></span>
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -323,7 +337,9 @@
               <span class="featured--title">Doula Lagergren</span>
               Basic onepage site presenting Angelica Lagergren, a Doula in
               Stockholm, and her services. Built with Elementor in Wordpress.
-              <span class="featured--title underline">>></span>
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -345,7 +361,10 @@
               <span class="featured--title">Vattnet Går</span>
               Business website for podcast/community Vattnet Går. Design,
               Graphic Profile and development made by me. Built with Elementor
-              in Wordpress. <span class="featured--title underline">>></span>
+              in Wordpress.
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>
@@ -368,7 +387,9 @@
               <span class="featured--title">Teenytiny</span>
               Webshop for me and my friend Andrea's side project Teenytiny.
               Built in Wordpress featuring WooCommerce and Klarna plugins.
-              <span class="featured--title underline">>></span>
+              <span class="featured--title underline" aria-hidden="true"
+                >>></span
+              >
             </p>
             <div class="codeboxes" aria-hidden="true">
               <div class="codebox">HTML5</div>

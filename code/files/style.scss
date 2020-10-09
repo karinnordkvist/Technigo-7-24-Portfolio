@@ -92,6 +92,10 @@ a:hover {
   font-weight: $bold;
 }
 
+.regular {
+  font-weight: $regular;
+}
+
 .bold-italic {
   font-weight: $bold;
   font-style: italic;
@@ -112,14 +116,10 @@ a:hover {
   height: 50vh;
   background-size: cover;
   display: flex;
-  // SRC-set for Safari
+  // Fallback-format för Safari som ej stödjer webp
   background-image: url(../images/header-image.webp),
     url(../images/header-image-3.png);
   background-image: -webkit-image-set(url(../images/header-image-3.png) 1x);
-  // background-image: image-set(
-  //   url(../images/header-image-3.webp) 1x,
-  //   url(../images/header-image-3.png) 2x
-  // );
 }
 
 .header-wrapper {
