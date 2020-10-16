@@ -330,6 +330,11 @@ a:hover {
   position: relative;
 }
 
+.thoughts .heading,
+.thoughts .subheading {
+  visibility: hidden;
+}
+
 // Coming soon-box
 .thoughts--cover {
   position: absolute;
@@ -354,6 +359,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
+  visibility: hidden;
 }
 
 .thought--img {
@@ -386,6 +392,7 @@ a:hover {
 .more-thoughts--wrapper {
   @include robotoText;
   width: 60vw;
+  visibility: hidden;
 }
 
 .more-thoughts--text {
