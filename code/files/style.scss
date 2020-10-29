@@ -330,10 +330,10 @@ a:hover {
   position: relative;
 }
 
-.thoughts .heading,
-.thoughts .subheading {
-  visibility: hidden;
-}
+// .thoughts .heading,
+// .thoughts .subheading {
+//   visibility: hidden;
+// }
 
 // Coming soon-box
 .thoughts--cover {
@@ -359,7 +359,6 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
-  visibility: hidden;
 }
 
 .thought--img {
@@ -392,12 +391,16 @@ a:hover {
 .more-thoughts--wrapper {
   @include robotoText;
   width: 60vw;
-  visibility: hidden;
+  display: none;
 }
 
 .more-thoughts--text {
   font-weight: $bold;
   margin: 0;
+}
+
+.thoughts--subhead {
+  display: none;
 }
 
 /* ----------------------------- SKILLS -----------------------------  */

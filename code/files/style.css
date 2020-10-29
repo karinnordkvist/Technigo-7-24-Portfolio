@@ -291,11 +291,6 @@ a:hover {
   position: relative;
 }
 
-.thoughts .heading,
-.thoughts .subheading {
-  visibility: hidden;
-}
-
 .thoughts--cover {
   position: absolute;
   width: 93%;
@@ -318,7 +313,6 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
-  visibility: hidden;
 }
 
 .thought--img {
@@ -355,12 +349,16 @@ a:hover {
   font-size: 16px;
   line-height: 1.6;
   width: 60vw;
-  visibility: hidden;
+  display: none;
 }
 
 .more-thoughts--text {
   font-weight: 700;
   margin: 0;
+}
+
+.thoughts--subhead {
+  display: none;
 }
 
 /* ----------------------------- SKILLS -----------------------------  */
