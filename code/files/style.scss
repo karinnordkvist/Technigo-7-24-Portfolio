@@ -330,12 +330,6 @@ a:hover {
   position: relative;
 }
 
-// .thoughts .heading,
-// .thoughts .subheading {
-//   visibility: hidden;
-// }
-
-// Coming soon-box
 .thoughts--cover {
   position: absolute;
   width: 93%;
@@ -343,13 +337,13 @@ a:hover {
   background: $secondarycolor;
   opacity: 0.8;
   display: flex;
+}
 
-  .thoughts--cover--text {
-    font-size: 24px;
-    width: 100%;
-    text-align: center;
-    align-self: center;
-  }
+.thoughts--cover--text {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  align-self: center;
 }
 
 .thoughts--wrapper {
@@ -534,6 +528,10 @@ li {
   .more-thoughts--wrapper,
   .skills--wrapper {
     width: 80vw;
+  }
+
+  .header--icons--wrapper {
+    align-self: flex-end;
   }
 
   .field {

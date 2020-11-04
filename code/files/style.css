@@ -299,7 +299,8 @@ a:hover {
   opacity: 0.8;
   display: flex;
 }
-.thoughts--cover .thoughts--cover--text {
+
+.thoughts--cover--text {
   font-size: 24px;
   width: 100%;
   text-align: center;
@@ -504,6 +505,10 @@ li {
 .more-thoughts--wrapper,
 .skills--wrapper {
     width: 80vw;
+  }
+
+  .header--icons--wrapper {
+    align-self: flex-end;
   }
 
   .field {
